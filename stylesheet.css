@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* ===== Estilizando a Navbar ===== */
 .my-header {
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -25,7 +25,7 @@
 /* ===== Seção Principal ===== */
 .main {
     height: 100vh;
-    background-color: #f0f0f0; /* Fundo cinza claro */
+    background-color: #f0f0f0;
     color: black;
     display: flex;
     align-items: center;
@@ -186,9 +186,49 @@
 
 
 
+#carousel-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+#row-carousel {
+    display: flex;
+    gap: 30px;
+    animation: slide 15s linear infinite;
+}
+
+.carrossel-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    /
+}
+
+.carrossel-element img {
+    width: 80px;
+    height: auto;
+}
 
 
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
 
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .carrossel-element img {
+        width: 60px;
+    }
+}
 
 
 
